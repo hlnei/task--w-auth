@@ -1,66 +1,85 @@
+/* Ensure the .task-page container covers the entire viewport height */
 .task-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligns content at the start of the page */
+  min-height: 100vh; /* Ensures the container takes up at least the full height of the viewport */
+  padding: 20px;
+  background: url('https://forums.zenyte.com/uploads/monthly_2021_04/AdmirableDemandingGoitered-max-1mb.gif.3599acefa721bfc970f7f0f88a6ce8d2.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #5600f5; /* Ensure text color contrasts well with the background */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+h2 {
+  color: #ffffffc5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .task-form {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    width: 100%;
-    max-width: 500px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
 }
 
 .task-form input,
+.task-form textarea,
 .task-form button {
-    margin-top: 10px;
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
+  margin-top: 10px;
+  width: calc(100% - 16px); /* Full width minus padding */
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+.task-form textarea {
+  resize: vertical; /* Allows vertical resizing only */
 }
 
 .task-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  background-color: #8923fd;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .task-form button:hover {
-    background-color: #45a049;
+  background-color: #5f0fb9;
 }
 
 .task-list {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 500px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .task-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  margin-top: 10px;
 }
 
 .task-item button {
-    margin-left: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #8923fd;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px 10px;
 }
 
 .task-item button:hover {
-    background-color: #0056b3;
+  background-color: #5f0fb9;
 }
