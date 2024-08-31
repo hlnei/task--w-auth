@@ -1,3 +1,4 @@
+//LoginPage.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
@@ -40,7 +41,9 @@ function LoginPage() {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleLogin}>Login</button>
-      <button onClick={() => navigate("/register")}>Register</button>
+      <p className="link-text">
+        No account? <span onClick={() => navigate("/register")} className="register-link">Register here</span>
+      </p>
     </div>
   );
 }
