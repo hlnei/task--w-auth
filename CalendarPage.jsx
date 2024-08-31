@@ -36,8 +36,11 @@ function CalendarPage() {
   
   return (
     <div className="calendar-container">
-      <h1>Task Manager</h1>
+      <h1>Task Calendar</h1>
       <Calendar onClickDay={handleDateClick} tileContent={getTileContent} />
+      <div className="button-group">
+        <button onClick={() => navigate("/login")} className="back-button">Log Out</button>
+      </div>
     </div>
   );
 }
