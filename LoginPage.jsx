@@ -27,7 +27,7 @@ function LoginPage() {
 
   return (
     <div className="auth-container">
-      <h2>Login</h2>
+      <h2>Welcome to TaskMGMT!</h2>
       <input
         type="text"
         placeholder="Username"
@@ -40,7 +40,7 @@ function LoginPage() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogin}>Log In</button>
       <p className="link-text">
         No account? <span onClick={() => navigate("/register")} className="register-link">Register here</span>
       </p>
