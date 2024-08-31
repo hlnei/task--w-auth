@@ -26,7 +26,7 @@ function RegisterPage() {
 
   return (
     <div className="auth-container">
-      <h2>Register</h2>
+      <h2>Create an Account</h2>
       <input
         type="text"
         placeholder="Username"
